@@ -1,0 +1,90 @@
+@Resturants.API_HostAddress = https://localhost:7100
+
+
+GET {{Resturants.API_HostAddress}}/api/resturants
+
+###
+
+GET {{Resturants.API_HostAddress}}/api/resturants/3
+
+###
+
+
+POST {{Resturants.API_HostAddress}}/api/resturants
+Content-Type: application/json
+
+{
+   "Name": "Spicy Delights",
+   "Description": "A place where you can get the best spicy food in town",
+   "Category" : "italian",
+   "HasDelivery": true,
+   "ContactEmail": "info@gourmetdel.com",
+   "ContactNzumber": "1234567890",
+   "Street": "123 Main Street",
+   "City": "New York",
+   "PostalCode": "10-001"
+}
+
+###
+GET https://localhost:7100/api/Resturants/8
+
+###
+
+DELETE {{Resturants.API_HostAddress}}/api/resturants/1
+
+###
+
+PATCH {{Resturants.API_HostAddress}}/api/resturants/2
+Content-Type: application/json
+
+{
+   "Name": "121",
+   "Description": "12",
+   "Category" : "test2"
+}
+
+###
+
+POST {{Resturants.API_HostAddress}}/api/restaurant/3/dishes
+Content-Type: application/json
+
+{
+  "Name": "Spicy Chicken",
+  "Description": "Spicy Chicken with a side of fries",
+  "Price": 12.99,
+  "KiloCalories": 450
+}
+
+###
+
+GET {{Resturants.API_HostAddress}}/api/restaurant/3/dishes
+
+###
+
+GET {{Resturants.API_HostAddress}}/api/restaurant/1/dishes/3
+
+###
+
+DELETE {{Resturants.API_HostAddress}}/api/restaurant/3/dishes
+
+###
+
+DELETE {{Resturants.API_HostAddress}}/api/restaurant/3/dishes/3
+
+###
+POST {{Resturants.API_HostAddress}}/register
+Content-Type: application/json
+
+{
+  "email": "testuser@teset.com",
+  "password" : "Testpassword1!"
+}
+
+###
+POST {{Resturants.API_HostAddress}}/login
+Content-Type: application/json
+
+{
+  "email": "testuser@teset.com",
+  "password" : "Testpassword1!"
+}
